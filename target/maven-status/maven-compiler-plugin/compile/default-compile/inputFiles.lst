@@ -1,0 +1,8 @@
+/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/ApiWebCurrcukumApplication.java
+/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/application/controller/AppController.java
+/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/application/controller/CurriculoController.java
+/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/application/serviceImpl/CurriculoServiceImpl.java
+/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/domain/entity/Curriculo.java
+/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/domain/repository/CurriculoRepository.java
+/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/domain/service/CurriculoService.java
+/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/infra/SpringFoxConfig.java
