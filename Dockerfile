@@ -1,5 +1,5 @@
 # Usar a imagem oficial do OpenJDK 21 como imagem base
-FROM openjdk:11-jre-slim
+FROM openjdk:21-jdk
 
 # Definir argumentos para passar detalhes do jar durante o build
 ARG JAR_FILE=target/*.jar
@@ -11,5 +11,5 @@ COPY target/api_web_currcukum-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 
 # Comando para rodar a aplicação
-ENTRYPOINT ["java", "-jar", "/app.jar", "--debug"]
+ENTRYPOINT ["java", "-jar", "/app.jar", --debug"]
 
