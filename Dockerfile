@@ -5,7 +5,8 @@ FROM openjdk:21-jdk-bullseye
 WORKDIR /app
 
 # Copie o JAR da aplicação para o contêiner
-COPY target/your-spring-boot-app.jar app.jar
+COPY target/api_web_currcukum-0.0.1-SNAPSHOT.jar app.jar
 
 # Comando para executar a aplicação
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
