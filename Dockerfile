@@ -1,5 +1,5 @@
 # Usar a imagem oficial do OpenJDK 21 como imagem base
-FROM openjdk:21-jdk
+FROM openjdk:11-jre-slim
 
 # Definir argumentos para passar detalhes do jar durante o build
 ARG JAR_FILE=target/*.jar
