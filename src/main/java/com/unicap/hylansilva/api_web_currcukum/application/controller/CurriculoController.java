@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +24,6 @@ public class CurriculoController {
     @Autowired
     private CurriculoService curriculoService;
 
-    @GetMapping
     public List<Curriculo> getAllCurriculos() {
         return curriculoService.findAll();
     }
@@ -35,9 +35,18 @@ public class CurriculoController {
                         .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
     public Curriculo createCurriculo(@RequestBody Curriculo curriculo) {
         return curriculoService.save(curriculo);
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<Curriculo> updateCurriculoById(@PathVariable Long id, @RequestBody Curriculo curriculo) {
+        if (!curriculo.getId().equals(id)) {
+            return ResponseEntity.badRequest().build();
+        }
+
+        Curriculo updatedCurriculo = curriculoService.save(curriculo);
+        return ResponseEntity.ok(updatedCurriculo);
     }
 
     @DeleteMapping("/{id}")

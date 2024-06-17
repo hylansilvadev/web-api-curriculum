@@ -5,4 +5,4 @@
 /workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/domain/entity/Curriculo.java
 /workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/domain/repository/CurriculoRepository.java
 /workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/domain/service/CurriculoService.java
-/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/infra/SpringFoxConfig.java
+/workspaces/web-api-curriculum/src/main/java/com/unicap/hylansilva/api_web_currcukum/infra/SwaggerConfig.java

@@ -1,15 +1,10 @@
-# Usar a imagem oficial do OpenJDK 21 como imagem base
-FROM openjdk:21-jdk
+FROM maven:3.9.7-sapmachine-21
 
-# Definir argumentos para passar detalhes do jar durante o build
-ARG JAR_FILE=target/*.jar
+WORKDIR /app
+COPY . .
 
-# Copiar o jar do projeto construído para o diretório raiz do container
-COPY target/api_web_currcukum-0.0.1-SNAPSHOT.jar app.jar
+RUN mvn clean install
 
-# Expor a porta em que a aplicação estará ouvindo
 EXPOSE 8080
 
-# Comando para rodar a aplicação
-ENTRYPOINT ["java", "-jar", "/app.jar", --debug"]
-
+CMD mvn spring-boot:run

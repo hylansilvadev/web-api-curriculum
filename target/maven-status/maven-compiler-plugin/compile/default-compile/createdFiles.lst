@@ -1,7 +1,7 @@
 com/unicap/hylansilva/api_web_currcukum/ApiWebCurrcukumApplication.class
 com/unicap/hylansilva/api_web_currcukum/application/controller/CurriculoController.class
-com/unicap/hylansilva/api_web_currcukum/infra/SpringFoxConfig.class
 com/unicap/hylansilva/api_web_currcukum/domain/entity/Curriculo.class
+com/unicap/hylansilva/api_web_currcukum/infra/SwaggerConfig.class
 com/unicap/hylansilva/api_web_currcukum/domain/repository/CurriculoRepository.class
 com/unicap/hylansilva/api_web_currcukum/domain/service/CurriculoService.class
 com/unicap/hylansilva/api_web_currcukum/application/serviceImpl/CurriculoServiceImpl.class
