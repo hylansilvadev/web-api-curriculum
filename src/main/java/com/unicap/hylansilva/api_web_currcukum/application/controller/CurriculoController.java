@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.unicap.hylansilva.api_web_currcukum.domain.entity.Curriculo;
 import com.unicap.hylansilva.api_web_currcukum.domain.service.CurriculoService;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -27,11 +26,7 @@ public class CurriculoController {
     @Autowired
     private CurriculoService curriculoService;
 
-    @GetMapping
-    public String getMethodName(@RequestParam String param) {
-        return new String();
-    }
-    
+    @GetMapping()
     public List<Curriculo> getAllCurriculos() {
         return curriculoService.findAll();
     }
@@ -42,13 +37,7 @@ public class CurriculoController {
         return curriculo.map(ResponseEntity::ok)
                         .orElseGet(() -> ResponseEntity.notFound().build());
     }
-    @PostMapping
-    public String postMethodName(@RequestBody String entity) {
-        //TODO: process POST request
-        
-        return entity;
-    }
-    
+    @PostMapping()
     public Curriculo createCurriculo(@RequestBody Curriculo curriculo) {
         return curriculoService.save(curriculo);
     }
